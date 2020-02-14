@@ -1,14 +1,45 @@
-# Project plan for Jobble 
+# Project plan for Jobble
 
 ## Overview
 
-Jobble is a job seeker app which allows job seekers to download and curate their own personal lists of jobs they are interested in applying for. It is "Tinder for Jobs". 
+Jobble is a job seeker app which allows job seekers to download and curate their own personal lists of jobs they are interested in applying for. It is "Tinder for Jobs".
 
-In our initial MVP, we will pull jobs from LinkedIn using the LinkedIn API. (We will also require users to create an account in Jobble in order to use it, and have authentication for this.) We will also have our own Jobble API which will allow the app to stored and retrieve saved jobs in  MongoDB.
+In our initial MVP, we will pull jobs from LinkedIn using the LinkedIn API. (We will also require users to create an account in Jobble in order to use it, and have authentication for this.) We will also have our own Jobble API which will allow the app to stored and retrieve saved jobs in MongoDB.
 
 ## Models
 
-(Qusai to fill in.)
+There are two main schemas going into this application.
+
+#### User
+
+```JS
+{
+  userId: String,
+  name: String,
+  unsavedJobs: [{job}, {job}, {job}],
+  savedJobs: [{job}, {job}, {job}],
+  discardedJobs: [jobId, jobId, jobId],
+}
+```
+
+#### Job
+
+```JS
+{
+  jobId: String,
+  description: String,
+  location: {
+    name: String,
+    country: {
+      code: String
+    }
+  },
+  jobPoster: {
+    firstName: String,
+    lastName: String
+  }
+}
+```
 
 ## Team
 

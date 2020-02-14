@@ -16,9 +16,9 @@ There are two main schemas going into this application.
 {
   userId: String,
   name: String,
-  unsavedJobs: [{job}, {job}, {job}],
-  savedJobs: [{job}, {job}, {job}],
-  discardedJobs: [jobId, jobId, jobId],
+  unsavedJobs: [{job}, {job}, {job}], // List of jobs from search
+  savedJobs: [{job}, {job}, {job}], // Jobs to be saved to user's database
+  discardedJobs: [jobId, jobId, jobId], // IDs of jobs to be filtered out of future searches
 }
 ```
 

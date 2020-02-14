@@ -38,6 +38,11 @@ There are two main schemas going into this application.
     firstName: String,
     lastName: String
   }
+  datePosted: {
+    year: Number,
+    month: Number,
+    day: Number
+  }
 }
 ```
 

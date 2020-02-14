@@ -37,7 +37,7 @@ There are two main schemas going into this application.
   jobPoster: {
     firstName: String,
     lastName: String
-  }
+  },
   datePosted: {
     year: Number,
     month: Number,

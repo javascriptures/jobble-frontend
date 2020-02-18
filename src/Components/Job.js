@@ -7,7 +7,7 @@ const Job = ({ match }) => {
     const [error, setError] = useState(false);
 
 useEffect(() => {
-    const url = `${APIURL}/api/jobs/refresh`;
+    const url = `${APIURL}/api/jobs`;
     fetch(url)
       .then(response => response.json())
       .then(data => {

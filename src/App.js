@@ -1,12 +1,31 @@
 import React from 'react';
-import Header from './Components/Header';
-import './App.css';
+import { Link, Route, Switch } from 'react-router-dom';
 
-function App() {
-return (
-  <div>
-    <Header/>
-  </div>
-)
-}
+import './App.css';
+import About from './Components/About';
+import Home from './Components/Home';
+//import ListView from './Components/ListView';
+import Login from './Components/Login';
+import Unsorted from './Components/Unsorted';
+
+const App = () => {
+  return (
+    <>
+      <header>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/review">Review Jobs!</Link>
+      </header>
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/review" component={Unsorted} />
+        </Switch>
+      </main>
+    </>
+  );
+};
 export default App;

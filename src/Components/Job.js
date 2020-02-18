@@ -7,7 +7,7 @@ const Job = ({ match }) => {
     const [error, setError] = useState(false);
 
 useEffect(() => {
-    const url = `${APIURL}`;
+    const url = `${APIURL}/api/jobs/refresh`;
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -20,12 +20,16 @@ useEffect(() => {
       });
   }, []);
 
+  if (error) {
+      return <div>Sorry, there was a problem.</div>
+  }
+
   return (
-    <div className="JobContainer">
+    <ul className="JobContainer">
       {jobs.map(job => (
-        <JobContainer jobs = {jobs}/>
+        <JobContainer jobs={job}/>
       ))}
-    </div>
+    </ul>
   );
 }
 

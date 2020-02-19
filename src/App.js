@@ -9,14 +9,35 @@ import Login from './Components/Login';
 import Unsorted from './Components/Unsorted';
 import Jobs from './Components/Jobs'
 
+import ResponsiveMenu from 'react-responsive-navbar';
+
 const App = () => {
   return (
     <>
       <header>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/review">Review Jobs!</Link>
+        <ResponsiveMenu
+          menuOpenButton={<div />}
+          menuCloseButton={<div />}
+          changeMenuOn="500px"
+          largeMenuClassName="large-menu-classname"
+          smallMenuClassName="small-menu-classname"
+          menu={
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/review">Review Jobs!</Link>
+              </li>
+            </ul>
+          }
+        />
       </header>
       <Jobs />
       <main>

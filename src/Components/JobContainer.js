@@ -14,10 +14,11 @@ function JobContainer({ job }) {
   return (
     <div className="JobContainer">
       <img src={company_logo} />
-      <h1>title</h1>
-      <h3>company</h3>
-      <p>created</p>
-      <p>description</p>
+      <h1>{title}</h1>
+      <h3>{company}</h3>
+      <p>{created}</p>
+      <p>{how_to_apply}</p>
+      <p>{description}</p>
     </div>
   );
 }

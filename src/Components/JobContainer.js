@@ -16,7 +16,8 @@ function JobContainer({ job }) {
       <img src={company_logo} />
       <h1>{title}</h1>
       <h3>{company}</h3>
-      <p>{created}</p>
+      <p>{location}</p>
+      <p>{created_at}</p>
       <p>{how_to_apply}</p>
       <p>{description}</p>
     </div>

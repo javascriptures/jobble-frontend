@@ -3,16 +3,16 @@
 ## about 
 Jobble is a job seeker app which allows users to download and curate their own personal lists of jobs they are interested in applying for.
  
-## Jobble app (browser)
+## Jobble app (Browser View)
 [post picture]
 
-## Jobble app (phone)
+## Jobble app (Mobile View)
 [post picture]
 
 ## Technologies Used
 - React (Dom, Hooks, Router)
 - React Bootstrap
-- Jobs.github (Jobs posting) 
+- Jobs.github (Jobs Posting) 
     -  [https://jobs.github.com/positions.json?description=react&page=1]
 - Material UI which support responsive (mobile/web) design
 - 

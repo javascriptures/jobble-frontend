@@ -32,10 +32,7 @@ function JobContainer({ match }) {
       <p>{job && job.location}</p>
       <p>{job && job.created_at}</p>
       <p>{job && job.how_to_apply}</p>
-      {job &&
-        (job.description =
-          'we will perform string substitution here to convert HTML markdown to text')}
-      {/* <p>{job && job.description}</p> */}
+      <div dangerouslySetInnerHTML={{__html: (job && job.description)}}/>
     </div>
   );
 }

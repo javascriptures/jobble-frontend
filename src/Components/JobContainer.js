@@ -17,6 +17,17 @@ function JobContainer({ match }) {
       });
   }, []);
 
+  const saveJob = () => {
+    const url = `${APIURL}/users/save/${match.params.id}`;
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json; charset=UTF-8'
+      },
+      body: JSON.stringify({ id: '5e4d82beaa14280004088afe' })
+    }).then(res => res.json());
+  };
+
   if (error) {
     console.log(match.params.id);
     return <div>Job didn't render</div>;
@@ -24,13 +35,17 @@ function JobContainer({ match }) {
 
   return (
     <div className="JobContainer">
+      <button className="save" onClick={saveJob}>
+        Save
+      </button>
       <h1>{job && job.title}</h1>
-      <img src={job && job.company_logo} />
+      <img src={job && job.company_logo} alt={job && job.title} />
       <h3>{job && job.company}</h3>
       <p>{job && job.location}</p>
       <p>Posted: {job && job.created_at}</p>
-      <h4>Apply:</h4> <div dangerouslySetInnerHTML={{__html: (job && job.how_to_apply)}}/>
-      <div dangerouslySetInnerHTML={{__html: (job && job.description)}}/>
+      <h4>Apply:</h4>{' '}
+      <div dangerouslySetInnerHTML={{ __html: job && job.how_to_apply }} />
+      <div dangerouslySetInnerHTML={{ __html: job && job.description }} />
     </div>
   );
 }

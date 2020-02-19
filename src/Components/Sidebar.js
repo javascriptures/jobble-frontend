@@ -12,11 +12,11 @@ function Sidebar() {
     <>
       <div
         onClick={openMenu}
-        className={`menu-btn-container ${open && 'open'}`}
+        className={`menu-btn-container ${open ? 'open' : ''}`}
       >
         <div className="menu-btn"></div>
       </div>
-      <aside className={open && 'open'}>
+      <aside className={open ? 'open' : ''}>
         <Link className="nav-link" to="/">
           Home
         </Link>

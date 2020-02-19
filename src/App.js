@@ -7,7 +7,7 @@ import Home from './Components/Home';
 //import ListView from './Components/ListView';
 import Login from './Components/Login';
 import Unsorted from './Components/Unsorted';
-import Jobs from './Components/Jobs';
+import Jobs from './Components/Jobs'
 
 const App = () => {
   return (

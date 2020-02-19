@@ -24,14 +24,12 @@ function JobContainer({ match }) {
 
   return (
     <div className="JobContainer">
-      <h1>CONTAINER</h1>
-      <h3>{job && job.title}</h3>
-      <img src={job && job.company_logo} />
       <h1>{job && job.title}</h1>
+      <img src={job && job.company_logo} />
       <h3>{job && job.company}</h3>
       <p>{job && job.location}</p>
-      <p>{job && job.created_at}</p>
-      <p>{job && job.how_to_apply}</p>
+      <p>Posted: {job && job.created_at}</p>
+      <h4>Apply:</h4> <div dangerouslySetInnerHTML={{__html: (job && job.how_to_apply)}}/>
       <div dangerouslySetInnerHTML={{__html: (job && job.description)}}/>
     </div>
   );

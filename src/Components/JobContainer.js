@@ -1,6 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {APIURL} from '../config'
 
-function JobContainer({ job }) {
+function JobContainer({ match }) {
+    const [job, setJob] = useState({})
+    const [error, setError] = useState({});
+  
+  useEffect(() => {
+    console.log(match.params.id);
+    const url = `${APIURL}/jobs/${match.params.id}`;
+    fetch(url)
+      .then(job => job.json())
+      .then(setJob(job))
+      .then(console.log(job))
+      .catch(error => {
+        console.log(error);
+        setError(true);
+      });
+  }, []);
+
+  if (error) {
+      console.log(match.params)
+    return <div>Job didn't render</div>;
+  }
+
   const type = job.type;
   const created_at = job.created_at;
   const company = job.company;

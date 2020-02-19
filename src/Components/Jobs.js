@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { APIURL } from '../config';
 import JobContainer from './JobContainer'
 
@@ -15,7 +15,6 @@ const Jobs = props => {
       .then(response => response.json())
       .then(jobs => {
         console.log('Loading Jobs' + jobs);
-        console.log(jobs[0].type)
         setJobs(jobs);
       })
       .catch(error => {
@@ -39,8 +38,13 @@ const Jobs = props => {
   return (
     <ul>
       {jobs.map(job => (
-        <li key={job.id}>
-          <JobContainer jobs = {jobs} />
+        <li key={job._id}>
+          <Link to={`jobs/${job._id}`}>
+            <Route exact path = {'/jobs/:id'}
+            render ={(props) => {
+              return (<JobContainer match = {props.match}/>)
+            }}
+          />{job.title}</Link>
         </li>
       ))}
     </ul>

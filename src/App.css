@@ -7,3 +7,7 @@
 li {
   list-style-type: none;
 }
+
+.JobContainer img {
+  max-height: 3rem;
+}

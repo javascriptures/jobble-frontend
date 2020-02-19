@@ -4,10 +4,9 @@ import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './Components/About';
 import Home from './Components/Home';
-//import ListView from './Components/ListView';
 import Login from './Components/Login';
-// import Unsorted from './Components/Unsorted';
 import Jobs from './Components/Jobs';
+import JobContainer from './Components/JobContainer';
 
 import ResponsiveMenu from 'react-responsive-navbar';
 
@@ -45,6 +44,7 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/review" component={Jobs} />
+          <Route exact path="/jobs/:id" component={JobContainer} />
         </Switch>
       </main>
     </>

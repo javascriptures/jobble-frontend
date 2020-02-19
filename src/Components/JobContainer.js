@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { APIURL } from '../config';
 
 function JobContainer({ match }) {
-  // const [job, setJob] = useState(null);
+
   const [job, setJob] = useState(null);
   const [error, setError] = useState(null);
 
@@ -24,6 +24,8 @@ function JobContainer({ match }) {
 
   return (
     <div className="JobContainer">
+    <button>Save</button>
+    <button>Discard</button>
       <h1>{job && job.title}</h1>
       <img src={job && job.company_logo} />
       <h3>{job && job.company}</h3>

@@ -5,6 +5,7 @@ function JobContainer({ match }) {
 
   const [job, setJob] = useState(null);
   const [error, setError] = useState(null);
+  const [userid, setUserid] = useState('5e4c6b9713a3f3fb809804e0');
 
   useEffect(() => {
     const url = `${APIURL}/jobs/${match.params.id}`;
@@ -22,9 +23,22 @@ function JobContainer({ match }) {
     return <div>Job didn't render</div>;
   }
 
+  const saveJob = () => {
+      const url = `${APIURL}/users/save/${job._id}`
+      fetch(url, {method: 'PUT', body: JSON.stringify({id: userid}), headers: {
+        'Content-Type': 'application/json'
+      }})
+      .then(res => res.json())
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
+    saveJob();
+  }
+
   return (
     <div className="JobContainer">
-    <button>Save</button>
+    <button onClick={handleClick}>Save</button>
     <button>Discard</button>
       <h1>{job && job.title}</h1>
       <img src={job && job.company_logo} />

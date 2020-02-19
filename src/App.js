@@ -3,6 +3,8 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import About from './Components/About';
+import Header from './Components/Header';
+import Sidebar from './Components/Sidebar';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import Jobs from './Components/Jobs';
@@ -13,31 +15,8 @@ import ResponsiveMenu from 'react-responsive-navbar';
 const App = () => {
   return (
     <>
-      <header>
-        <ResponsiveMenu
-          menuOpenButton={<div />}
-          menuCloseButton={<div />}
-          changeMenuOn="500px"
-          largeMenuClassName="large-menu-classname"
-          smallMenuClassName="small-menu-classname"
-          menu={
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/review">Review Jobs!</Link>
-              </li>
-            </ul>
-          }
-        />
-      </header>
+      <Header />
+      <Sidebar />
       <main>
         <Switch>
           <Route exact path="/" component={Home} />

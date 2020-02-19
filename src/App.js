@@ -8,7 +8,7 @@ import Home from './Components/Home';
 //import ListView from './Components/ListView';
 import Login from './Components/Login';
 import Unsorted from './Components/Unsorted';
-import Job from './Components/Job'
+import Jobs from './Components/Jobs'
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
         <Link to="/login">Login</Link>
         <Link to="/review">Review Jobs!</Link>
       </header>
+        <Jobs/>
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -26,7 +27,6 @@ const App = () => {
           <Route exact path="/login" component={Login} />
           <Route exact path="/review" component={Unsorted} />
         </Switch>
-        <Job/>
       </main>
     </>
   );

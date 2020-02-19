@@ -46,6 +46,18 @@ There are two main schemas going into this application.
 }
 ```
 
+## Wireframes
+### Browser View
+
+<img width="801" alt="Screen Shot 2020-02-14 at 2 31 38 PM" src="https://user-images.githubusercontent.com/58221902/74881200-e5648480-533a-11ea-9aa5-d6a4128c7b78.png">
+
+<img width="833" alt="Screen Shot 2020-02-14 at 3 13 22 PM" src="https://user-images.githubusercontent.com/58221902/74881265-ff9e6280-533a-11ea-88eb-28a73856efe4.png">
+
+### Mobile View 
+
+<img width="557" alt="Screen Shot 2020-02-14 at 2 31 20 PM" src="https://user-images.githubusercontent.com/58221902/74881302-104ed880-533b-11ea-80ac-ec87919f4463.png">
+
+
 ## Team
 
 - Ghazal Mansour

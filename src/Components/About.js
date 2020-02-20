@@ -5,7 +5,7 @@ const About = () => {
       <h1 className="aboutHeader">About Jobble</h1>
       <h2 className="aboutHeader"> Welcome to our app, your job hunting personal assistant!</h2>
 
-      <img className="jobs" src="/about-images/job-hunting.jpg" alt=""/>
+      <div className="jobPic"><img src="/about-images/job-hunting.jpg" alt=""/></div>
 
       <p> Jobble is a job seeker app which allows you to download and curate your own personal lists of jobs you are interested in applying for.</p>
       <p2>Sign up to Jobble today by signing up/in to Dashlane. And Start Hunting Your Dream Job. </p2>

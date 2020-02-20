@@ -166,7 +166,9 @@ h2.aboutHeader {
   font-size: medium;
   margin: 1% 0 1% 0;
 }
-.JobLists {
+.jobPic {
+  text-align: center;
+}.JobLists {
   padding-top: 18px ;
   padding-inline-start: 15px; 
   list-style-type: initial ;

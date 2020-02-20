@@ -156,10 +156,12 @@ main {
   margin: 2%;
 }
 .ourTeam{
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   margin: 4% 0 4% 0;
 }
 .aboutHeader {
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 h2.aboutHeader {
@@ -168,7 +170,27 @@ h2.aboutHeader {
 }
 .jobPic {
   text-align: center;
-}.JobLists {
+}
+.Text {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Text2 {
+  text-align: center;
+  font-size: 15px;
+  border-radius: 20px;
+   border-style: solid;
+ border-color:#287EC7;
+  color: red;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Jobs List */ 
+
+.JobLists {
   padding-top: 18px ;
   padding-inline-start: 15px; 
   list-style-type: initial ;

@@ -38,7 +38,7 @@ const Jobs = props => {
   return (
     <ul>
       {jobs.map(job => (
-        <li key={job._id}>
+        <li className="JobLists" key={job._id}>
           <Link to={`jobs/${job._id}`}>
             <Route exact path = {'/jobs/:id'}
             render ={(props) => {

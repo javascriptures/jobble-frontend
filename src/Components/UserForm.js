@@ -4,7 +4,8 @@ import TextField from '@material-ui/core/TextField'
 const UserForm = ({ user, handleSubmit, handleChange }) => (
   <form onSubmit={handleSubmit} className='form'>
     <div className="typefields">
-    <label htmlFor="title">Username</label>
+    <label htmlFor="title">Username:</label>
+    <div>
     <TextField
       id="outlined-basic" label="Username" variant="outlined"
       username="UserForm"
@@ -13,10 +14,12 @@ const UserForm = ({ user, handleSubmit, handleChange }) => (
       onChange={handleChange}
       required
     />
+    </div>
     <br />
     </div>
   <div className="typefields">
-    <label htmlFor="password">Password</label>
+    <label htmlFor="password">Password:</label>
+    <div>
     <TextField
       id="outlined-basic" label="Password" variant="outlined"
       className="UserForm"
@@ -24,6 +27,7 @@ const UserForm = ({ user, handleSubmit, handleChange }) => (
       name="password"
       onChange={handleChange}
     />
+    </div>
 
     <br />
   </div>

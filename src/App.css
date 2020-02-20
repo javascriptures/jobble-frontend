@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
   margin: 0;
@@ -133,4 +135,34 @@ main {
   .menu-btn-container.open .menu-btn::after {
     transform: rotate(-45deg) translate(35px, 35px);
   }
+}
+.profiles {
+  margin: 3%;
+  display: inline-block;
+  text-align: center;
+}
+.pic {
+  border-radius: 50%;
+  box-shadow: 10px 10px 24px -6px rgba(0,0,0,0.61);
+}
+.profileName {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+.profileContainer {
+  text-align: center;
+}
+.aboutContainer {
+  margin: 2%;
+}
+.ourTeam{
+  font-family: 'Montserrat', sans-serif;
+  margin: 4% 0 4% 0;
+}
+.aboutHeader {
+  font-family: 'Montserrat', sans-serif;
+}
+h2.aboutHeader {
+  font-size: medium;
+  margin: 1% 0 1% 0;
 }

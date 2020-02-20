@@ -166,3 +166,10 @@ h2.aboutHeader {
   font-size: medium;
   margin: 1% 0 1% 0;
 }
+.JobLists {
+  padding-top: 18px ;
+  padding-inline-start: 15px; 
+  list-style-type: initial ;
+  list-style-position: inside;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 

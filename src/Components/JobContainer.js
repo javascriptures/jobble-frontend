@@ -3,8 +3,9 @@ import { APIURL } from '../config';
 
 function JobContainer({ match }) {
   const [job, setJob] = useState(null);
+  // Hard code for now. TODO: Figure out how to share this globally after login
+  const [userid, setUserID] = useState('5e4c6b9713a3f3fb809804e0');
   const [error, setError] = useState(null);
-  const [userid, setUserid] = useState('5e4c6b9713a3f3fb809804e0');
 
   useEffect(() => {
     const url = `${APIURL}/jobs/${match.params.id}`;
@@ -18,13 +19,22 @@ function JobContainer({ match }) {
   }, []);
 
   const saveJob = () => {
-    const url = `${APIURL}/users/save/${match.params.id}`;
+    const url = `${APIURL}/users/${userid}/save/${match.params.id}`;
     fetch(url, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json; charset=UTF-8'
-      },
-      body: JSON.stringify({ id: '5e4d82beaa14280004088afe' })
+      }
+    }).then(res => res.json());
+  };
+
+  const discardJob = () => {
+    const url = `${APIURL}/users/${userid}/discard/${match.params.id}`;
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json; charset=UTF-8'
+      }
     }).then(res => res.json());
   };
 
@@ -35,9 +45,14 @@ function JobContainer({ match }) {
 
   return (
     <div className="JobContainer">
-      <button className="save" onClick={saveJob}>
-        Save
-      </button>
+      <div className="JobContainerButtons">
+        <button className="JobContainerButton" onClick={saveJob}>
+          Save
+        </button>
+        <button className="JobContainerButton" onClick={discardJob}>
+          Discard
+        </button>
+      </div>
       <h1>{job && job.title}</h1>
       <img src={job && job.company_logo} alt={job && job.title} />
       <h3>{job && job.company}</h3>

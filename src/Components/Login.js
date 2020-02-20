@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import { APIURL } from '../config.js';
-import CreateUserForm from './CreateUserForm.js';
+import UserForm from './UserForm.js';
 
-const UserCreate = () => {
+const Login = () => {
   const initialUserState = {
     username: '',
     unSavedJobs: [],
@@ -73,10 +73,10 @@ const UserCreate = () => {
   }
   return (
     <>
-      <h3>Login/Create a User</h3>
+      <h3>Login</h3>
 
       {error && <p>Something went wrong... Please try again!</p>}
-      <CreateUserForm
+      <UserForm
         user={user}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
@@ -85,4 +85,4 @@ const UserCreate = () => {
   );
 };
 
-export default UserCreate;
+export default Login;

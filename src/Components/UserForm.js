@@ -15,7 +15,8 @@ const UserForm = ({ user, handleSubmit, handleChange }) => (
 
     <label htmlFor="password">Password</label>
     <input
-      placeholder="Password Name"
+      className="UserForm"
+      placeholder="Password"
       value={user.password}
       name="password"
       onChange={handleChange}

@@ -25,12 +25,12 @@ function Sidebar() {
           About
         </Link>
 
-        <Link className="nav-link" to="/login">
-          Login
+        <Link className="nav-link" to="/signup">
+          Sign Up!
         </Link>
 
-        <Link className="nav-link" to="/review">
-          Review Jobs!
+        <Link className="nav-link" to="/myaccount">
+          My Account
         </Link>
       </aside>
     </>

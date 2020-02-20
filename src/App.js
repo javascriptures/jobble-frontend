@@ -7,10 +7,9 @@ import Header from './Components/Header';
 import Sidebar from './Components/Sidebar';
 import Home from './Components/Home';
 import Login from './Components/Login';
+import SignUp from './Components/SignUp';
 import Jobs from './Components/Jobs';
 import JobContainer from './Components/JobContainer';
-
-import ResponsiveMenu from 'react-responsive-navbar';
 
 const App = () => {
   return (
@@ -22,6 +21,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/review" component={Jobs} />
           <Route exact path="/jobs/:id" component={JobContainer} />
         </Switch>

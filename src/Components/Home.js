@@ -1,6 +1,4 @@
 import React from 'react';
-import turkey from '../images/jobble-turkey.png';
-import Logo from './Logo';
 
 function Home() {
   return (

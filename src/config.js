@@ -1,4 +1,4 @@
 export const APIURL =
   window.location.hostname === 'localhost'
-    ? 'http://jobble-backend.herokuapp.com'
+    ? 'http://localhost:8080'
     : 'http://jobble-backend.herokuapp.com ';

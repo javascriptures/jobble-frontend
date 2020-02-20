@@ -43,7 +43,7 @@ const SignUp = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const url = `${APIURL}/users/create/LukeSkywalker`;
+    const url = `${APIURL}/users/create`;
 
     fetch(url, {
       method: 'POST',
@@ -69,7 +69,7 @@ const SignUp = () => {
   };
 
   if (createdId) {
-    return <Redirect to={`/users/${createdId}`} />;
+    return <Redirect to={`/userhome`} />;
   }
   return (
     <>

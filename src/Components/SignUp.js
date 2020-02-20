@@ -72,14 +72,14 @@ const SignUp = () => {
     return <Redirect to={`/userhome`} />;
   }
   return (
-    <>
-      <h3>Sign Up!</h3>
+    <div className="signupContainer">
+      <h1 className="signupHeader">Sign Up!</h1>
       <h5>Usernames must contain only alphnumeric characters/numbers.</h5>
       <h5>Whitespace is not allowed.</h5>
       
-      <h7>
+      <h5>
         (We are not actually processing passwords...that will be added later)
-      </h7>
+      </h5>
 
       {error && <p>Something went wrong... Please try again!</p>}
       <UserForm
@@ -87,7 +87,7 @@ const SignUp = () => {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-    </>
+    </div>
   );
 };
 

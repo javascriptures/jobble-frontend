@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
-import { APIURL } from '../config.js';
-import UserForm from './UserForm.js';
+import { APIURL } from '../config';
+import UserForm from './UserForm';
 
 const Login = () => {
-  const initialUserState = {
-    username: '',
-    unSavedJobs: [],
-    savedJobs: [],
-    discardedJobs: []
-  };
-  const [user, setUser] = useState(initialUserState);
-  const [createdId, setCreatedId] = useState(null);
+  const [user, setUser] = useState(null);
+  const [createdId, setDeletedId] = useState(null);
   const [error, setError] = useState(false);
 
   const handleChange = event => {
@@ -43,7 +37,7 @@ const Login = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const url = `${APIURL}/users/`;
+    const url = `${APIURL}/users/delete`;
 
     fetch(url, {
       method: 'POST',
@@ -59,7 +53,7 @@ const Login = () => {
       // and take the user back to the "show" route which will
       // display the newly updated user.
       .then(data => {
-        setCreatedId(data._id);
+        setDeletedId(data._id);
       })
       .catch(() => {
         // Update the state if there was an error
@@ -69,7 +63,7 @@ const Login = () => {
   };
 
   if (createdId) {
-    return <Redirect to={`/users/${createdId}`} />;
+    return <Redirect to={`/userhome`} />;
   }
   return (
     <>

@@ -3,7 +3,7 @@ const About = () => {
   return (
     <div className="aboutContainer">
       <h1 className="aboutHeader">About Jobble</h1>
-      <h2 className="aboutHeader"> Welcome to our app, your job hunting personal assistant!</h2>
+      <h2 className="aboutHeader"> Welcome to Jobble, your job hunting personal assistant!</h2>
 
       <div className="jobPic"><img src="/about-images/job-hunting.jpg" alt=""/></div>
 

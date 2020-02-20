@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 * {
   margin: 0;
@@ -136,6 +137,8 @@ main {
     transform: rotate(-45deg) translate(35px, 35px);
   }
 }
+/* About Page */
+
 .profiles {
   margin: 3%;
   display: inline-block;
@@ -161,7 +164,6 @@ main {
   margin: 4% 0 4% 0;
 }
 .aboutHeader {
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 h2.aboutHeader {
@@ -222,3 +224,21 @@ h2.aboutHeader {
   line-height: 170%;
 }
 
+/* SignUp Page */
+
+.signupContainer {
+  margin: 2%;
+}
+.signupHeader {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 1.5% 0;
+}
+
+/*UserForm*/
+
+.form {
+  margin: 3%;
+}
+.typefields {
+  margin: 1%;
+}

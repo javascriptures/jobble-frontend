@@ -54,7 +54,7 @@ function JobContainer({ match }) {
         </button>
       </div>
       <h1>{job && job.title}</h1>
-      <img src={job && job.company_logo} alt={job && job.title} />
+      <img className="logo" src={job && job.company_logo} alt={job && job.title} />
       <h3>{job && job.company}</h3>
       <p>{job && job.location}</p>
       <p>Posted: {job && job.created_at}</p>

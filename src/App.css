@@ -192,8 +192,33 @@ h2.aboutHeader {
 
 .JobLists {
   padding-top: 18px ;
+  text-decoration: underline;
   padding-inline-start: 15px; 
-  list-style-type: initial ;
-  list-style-position: inside;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
+
+/* Jobs container */ 
+
+.JobContainerButtons {
+  padding: 10px ;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.JobContainerButton {
+  background-color: coral;
+  line-height: 30px; 
+   border-radius: 30px;
+   padding: 2px;
+   width: 18%;
+   font-size: 1rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: white;
+}
+.logo {
+  margin: 25px ;
+}
+.JobContainer {
+  padding-inline-start: 20px;
+  line-height: 170%;
+}
+

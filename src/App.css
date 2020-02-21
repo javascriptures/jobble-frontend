@@ -43,8 +43,12 @@ header {
 
 .title {
   font-family: 'Comfortaa', cursive;
+  font-size: 3rem;
 }
-
+#tagline {
+  font-size: 0.75rem;
+  margin: 0 0 0 4px;
+}
 /*     SIDEBAR     */
 
 aside {
@@ -303,4 +307,17 @@ label {
 .UserHomeH1 {
   margin: 2%;
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Home */
+.animation {
+  width: 30%;
+}
+.animationContainer {
+  text-align: center;
+}
+.thoughtBubble {
+  width: 30%;
+  margin-left: 17%;
+  margin-top: 1%;
 }

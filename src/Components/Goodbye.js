@@ -39,12 +39,14 @@ const Goodbye = props => {
 
   return (
     <>
-      <h2 className="title">I hope you found your job, {globalUsername}</h2>
-      <h2 className="title">Jobble Jobble</h2>
-      <div className="animationContainer">
-        <video className="animation" loop autoPlay>
-          <source src={jobblejobble} type="video/mp4" />
-        </video>
+      <div className="Goodbye">
+        <h2 className="title">I hope you found your job, {globalUsername}</h2>
+        <h3 className="title">Jobble Jobble</h3>
+        <div className="animationContainer">
+          <video className="animation" loop autoPlay>
+            <source src={jobblejobble} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </>
   );

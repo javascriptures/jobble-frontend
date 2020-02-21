@@ -11,6 +11,7 @@ const UserForm = ({ user, handleSubmit, handleChange }) => (
           label="Username"
           variant="outlined"
           username="UserForm"
+          style={{ width: '60%' }}
           value={user.username}
           name="username"
           onChange={handleChange}
@@ -27,6 +28,7 @@ const UserForm = ({ user, handleSubmit, handleChange }) => (
           label="Password"
           variant="outlined"
           className="UserForm"
+          style={{ width: '60%' }}
           value={user.password}
           name="password"
           onChange={handleChange}

@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Redirect, Link } from 'react-router-dom';
+import { useGlobalState } from '../state';
 import { APIURL } from '../config';
+import Button from '@material-ui/core/Button';
 
 function JobContainer({ match }) {
   const [job, setJob] = useState(null);
   // Hard code for now. TODO: Figure out how to share this globally after login
-  const [userid, setUserID] = useState('5e4c6b9713a3f3fb809804e0');
+  const [userid, setUserID] = useState();
   const [error, setError] = useState(null);
+  const [globalUsername, setGlobalUsername] = useGlobalState('username');
+  const [globalID, setGlobalID] = useGlobalState('userID');
 
   useEffect(() => {
     const url = `${APIURL}/jobs/${match.params.id}`;
@@ -19,6 +24,7 @@ function JobContainer({ match }) {
   }, []);
 
   const saveJob = () => {
+    // If globalID works here, use it instead. (Need to test)
     const url = `${APIURL}/users/${userid}/save/${match.params.id}`;
     fetch(url, {
       method: 'PUT',
@@ -46,15 +52,19 @@ function JobContainer({ match }) {
   return (
     <div className="JobContainer">
       <div className="JobContainerButtons">
-        <button className="JobContainerButton" onClick={saveJob}>
-          Save
-        </button>
-        <button className="JobContainerButton" onClick={discardJob}>
+        <Button color="primary" component={Link} to="/review">
           Discard
-        </button>
+        </Button>
+        <Button color="primary" component={Link} to="/savedjobs">
+          Save
+        </Button>
       </div>
       <h1>{job && job.title}</h1>
-      <img className="logo" src={job && job.company_logo} alt={job && job.title} />
+      <img
+        className="logo"
+        src={job && job.company_logo}
+        alt={job && job.title}
+      />
       <h3>{job && job.company}</h3>
       <p>{job && job.location}</p>
       <p>Posted: {job && job.created_at}</p>

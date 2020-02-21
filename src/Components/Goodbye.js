@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import jobblejobble from '../images/jobblejobble.mp4';
-import { useGlobalState } from 'react-hooks-global-state';
-import { APIURL } from '../config.js';
+import { useGlobalState } from '../state';
+import { APIURL } from '../config';
 
 const Goodbye = props => {
   const [deleted, setDeleted] = useState(false);

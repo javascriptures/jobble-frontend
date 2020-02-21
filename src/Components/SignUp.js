@@ -12,6 +12,7 @@ const SignUp = () => {
     discardedJobs: []
   };
   const [globalUsername, setGlobalUsername] = useGlobalState('username');
+  const [globalID, setGlobalID] = useGlobalState('userID');
   const [user, setUser] = useState(initialUserState);
   const [createdId, setCreatedId] = useState(null);
   const [error, setError] = useState(false);
@@ -62,6 +63,7 @@ const SignUp = () => {
       // display the newly updated user.
       .then(data => {
         setCreatedId(data._id);
+        setGlobalID(data._id);
         setGlobalUsername(data.username);
       })
       .catch(() => {
@@ -71,6 +73,7 @@ const SignUp = () => {
       });
   };
 
+  // Test if globalID works here:
   if (createdId) {
     return <Redirect to={`/userhome`} />;
   }

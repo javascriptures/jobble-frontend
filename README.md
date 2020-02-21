@@ -35,6 +35,7 @@ Jobble is a job seeker app which allows users to curate their own personal lists
 - As a user, I want to view jobs downloaded from GitHub Jobs which are of interest to me
 - As a user, I want to save the jobs which I am intersted in into my own personal list
 - As a user, I want to view my saved jobs list
+- As a user, I want to be able to apply for a job from within the app
 - As a user, I want the ability to delete my account
 
 ## How to Use Jobble

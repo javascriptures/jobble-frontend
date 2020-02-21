@@ -22,7 +22,7 @@ const UserHome = () => {
           View My Saved Jobs
         </button>
         <button className="UserHomeButton" onClick={deleteAccount}>
-          Delete My Jobble Account <span> 😞 </span>
+          Delete My Jobble Account
         </button>
       </div>
     </>

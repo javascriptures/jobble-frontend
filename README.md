@@ -1,4 +1,4 @@
-# Jobble
+# Jobble - Job Posting Curation App for Job Seekers
 
 ## About
 

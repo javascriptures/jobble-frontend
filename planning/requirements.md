@@ -27,7 +27,7 @@ You must have
 Your front-end must
 
 - [x] use React and
-- [x]leverage the backend API in the above requirements.
+- [x] leverage the backend API in the above requirements.
 
 You must communicate with the back-end API RESTfully to
 
@@ -38,20 +38,20 @@ You must communicate with the back-end API RESTfully to
 
 (using either [x] `fetch` or [] `axios`).
 
-- You must use either [] CSS Grid or [] Flexbox along with [] media queries to make your app responsive
-  across [] mobile, [] tablet, and [] desktop widths.
+- You must use either [x] CSS Grid or [x] Flexbox along with [x] media queries to make your app responsive
+  across [x] mobile, [x] tablet, and [x] desktop widths.
 
-- You must have at least [] 4 components and at least [] one test for each of your components
+- You must have at least [x] 4 components and at least [x] 4 component tests
 
 ## Project Requirements:
 
 - [x] You must include a `planning/` directory that sufficiently demonstrates your
       team's planning process.
-- [] Both your front-end and back-end repos have a README that adequately documents the project.
-- [] Every team member must have roughly the same number of individual commits in
-  the commit history for your app (dividing responsibilities between different
-  parts of the app is fine, but every team member must have commits in the
-  project).
+- [ ] Both your front-end and back-end repos have a README that adequately documents the project.
+- [x] Every team member must have roughly the same number of individual commits in
+      the commit history for your app (dividing responsibilities between different
+      parts of the app is fine, but every team member must have commits in the
+      project).
 - [x] Every team must follow a
       [Git Workflow](https://git.generalassemb.ly/seir-129/git-teams)
 - [] Every team member must speak for roughly the same amount of time during the
@@ -60,52 +60,46 @@ You must communicate with the back-end API RESTfully to
 ## Deployment Requirements:
 
 - [x] Your back-end/API must be deployed to Heroku and
-- [] your front-end must be deployed to
-  GitHub pages or [Heroku](https://git.generalassemb.ly/seir-129/project-2/blob/master/project-setup-and-deployment-guide.md).
-  Applications that are not deployed will be considered incomplete.
-  > We strongly recommend deploying your back-end and front-end separately. This
-  > will make it far easier to debug your deployed applications and manage your
-  > deployments.
+- [x] your front-end must be deployed to
+      GitHub pages or [x] Heroku (https://git.generalassemb.ly/seir-129/project-2/blob/master/project-setup-and-deployment-guide.md).
+      Applications that are not deployed will be considered incomplete.
 
 ## Final Application
 
 Your project is due on the last day of Project Week (the exact date and time are in your
 course calendar).
 
-[] Create an issue on this repo containing:
+[x] Create an issue on this repo containing:
+https://git.generalassemb.ly/seir-129/project3-gallery
 
-- [] A link to your deployed application
-- [] A link to your Project 3 Github repositories (Do not fork this repo)
+- [x] A link to your deployed application
+- [x] A link to your Project 3 Github repositories (Do not fork this repo)
 
 The repository for your backend API should include:
 
-- [] A working JSON API (built by your team) built using Express and Mongoose that
-  meets the technical requirements above.
-- [] Frequent commits dating back to the very beginning of the project.
-- [] A `readme.md` file in the root of your repo that follows
-  [good standards of documentation](https://git.generalassemb.ly/ga-wdi-lessons/documentation-markdown)
-  (i.e. explanations of the technologies used, the approach taken, features,
-  installation instructions, unsolved problems, etc.)
-- [] A `planning/` directory in the root of your repo containing a diagram mapping
-  out your project domain. You are welcome to include other planning documents
-  (e.g., wireframes, user stories).
-- [] A link to your hosted, working API in the URL section of your Github repo:
-
-> ![The URL section of your Github repo](https://i.imgur.com/QQ7RsfR.gif)
+- [x] A working JSON API (built by your team) built using Express and Mongoose that
+      meets the technical requirements above.
+- [x] Frequent commits dating back to the very beginning of the project.
+- [x] A `readme.md` file in the root of your repo that follows
+      [good standards of documentation](https://git.generalassemb.ly/ga-wdi-lessons/documentation-markdown)
+      (i.e. explanations of the technologies used, the approach taken, features,
+      installation instructions, unsolved problems, etc.)
+- [x] A `planning/` directory in the root of your repo containing a diagram mapping
+      out your project domain. You are welcome to include other planning documents
+      (e.g., wireframes, user stories).
+- [x] A link to your hosted, working API in the URL section of your Github repo:
 
 The repository for the frontend of your application should include:
 
-- [] A working frontend application (built by your team) built with React and React
-  Router that meets the technical requirements above.
-- [] Frequent commits dating back to the very beginning of the project.
-- [] A `readme.md` file in the root of your repo that follows
-  [good standards of documentation](https://git.generalassemb.ly/ga-wdi-lessons/documentation-markdown)
-  (i.e. explanations of the technologies used, the approach taken, features,
-  installation instructions, unsolved problems, etc.)
-- [] A `planning/` directory in the root of your repo containing a diagram mapping
-  out your project domain. You are welcome to include other planning documents
-  (e.g., wireframes, user stories).
-- [] A link to your hosted, working application in the URL section of your Github
-  repo:
-
-> ![The URL section of your Github repo](https://i.imgur.com/QQ7RsfR.gif)
+- [x] A working frontend application (built by your team) built with React and React
+      Router that meets the technical requirements above.
+- [x] Frequent commits dating back to the very beginning of the project.
+- [x] A `readme.md` file in the root of your repo that follows
+      [good standards of documentation](https://git.generalassemb.ly/ga-wdi-lessons/documentation-markdown)
+      (i.e. explanations of the technologies used, the approach taken, features,
+      installation instructions, unsolved problems, etc.)
+- [x] A `planning/` directory in the root of your repo containing a diagram mapping
+      out your project domain. You are welcome to include other planning documents
+      (e.g., wireframes, user stories).
+- [x] A link to your hosted, working application in the URL section of your Github
+      repo:

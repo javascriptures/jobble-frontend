@@ -4,6 +4,11 @@
 
 Jobble is a job seeker app which allows users to curate their own personal lists of jobs they are interested in applying for. It allows users to apply for jobs directly from the app.
 
+## Links
+- Deployed Front End: https://jobble-frontend.herokuapp.com/
+- Back End Repo: https://github.com/qusaifares/jobble-backend
+- Deployed Back End: https://jobble-backend.herokuapp.com/
+
 ## Technologies Used
 
 - ReactJS

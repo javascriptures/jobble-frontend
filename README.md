@@ -16,7 +16,10 @@ Jobble is a job seeker app which allows users to curate their own personal lists
 - Express
 - MongoDB
 - Mongoose
-- [Material UI](https://material-ui.com/guides/composition/#button)
+- Material UI
+  - [Material Icons](https://material-ui.com/components/icons/#icons)
+  - [TextField](https://material-ui.com/components/text-fields/)
+  - [Button](https://material-ui.com/guides/composition/#button)
 - [react-hooks-global-state](https://www.npmjs.com/package/react-hooks-global-state)
 - Enzyme/Jest
 - Mocha/Chai

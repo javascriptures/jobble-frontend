@@ -56,3 +56,5 @@ If you'd like to contribute to this application, feel free to make a pull reques
 - Minor tweaking to make the design more responsive on mobile/tablet.
 - Test the Delete API call once that API route is working.
 - More seamless incorporation of the react-global-state
+- Actual session management, password management
+- Optimize Mongo schema for performance

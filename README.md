@@ -1,4 +1,4 @@
-# Jobble - A Job Listing Management App for Job Seekers
+# Jobble - Job Posting Management for Job Seekers
 
 ## About
 

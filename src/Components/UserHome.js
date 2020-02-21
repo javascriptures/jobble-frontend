@@ -1,6 +1,11 @@
 import React from 'react';
+import { Redirect, Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 const UserHome = () => {
-  const viewNewJobs = () => {};
+  const viewNewJobs = () => {
+    return <Redirect to={`/review`} />;
+  };
   const viewSavedJobs = () => {};
   const deleteAccount = () => {};
 
@@ -10,9 +15,9 @@ const UserHome = () => {
         Welcome to Jobble, (name will be filled in)!
       </h1>
       <div className="UserHomeButtons">
-        <button className="UserHomeButton" onClick={viewNewJobs}>
+        <Button color="primary" component={Link} to="/review">
           View New Jobs
-        </button>
+        </Button>
         <button className="UserHomeButton" onClick={viewSavedJobs}>
           View My Saved Jobs
         </button>

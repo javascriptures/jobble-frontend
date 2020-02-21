@@ -29,7 +29,7 @@ function Sidebar() {
           Sign Up!
         </Link>
 
-        <Link className="nav-link" to="/myaccount">
+        <Link className="nav-link" to="/userhome">
           My Account
         </Link>
       </aside>

@@ -46,7 +46,6 @@ const SignUp = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const url = `${APIURL}/users/create`;
-    console.log(event.target.value);
 
     fetch(url, {
       method: 'POST',

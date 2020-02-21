@@ -12,8 +12,8 @@ const SavedJobs = props => {
     const url = `${APIURL}/jobs`;
     fetch(url)
       .then(response => response.json())
-      .then(jobs => {
-        setSavedJobs(jobs);
+      .then(savedjobs => {
+        setSavedJobs(savedjobs);
       })
       .catch(error => {
         console.log('Error: ', error);
@@ -25,7 +25,7 @@ const SavedJobs = props => {
 
   // Check if we have our jobs
   // Display "Loading..." if not
-  if (jobs.length === 0) {
+  if (savedjobs.length === 0) {
     return <div>Loading...</div>;
   }
 
@@ -35,7 +35,7 @@ const SavedJobs = props => {
 
   return (
     <ul>
-      {jobs.map(job => (
+      {savedjobs.map(job => (
         <li className="JobLists" key={job._id}>
           <Link to={`jobs/${job._id}`}>
             <Route

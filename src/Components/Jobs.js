@@ -5,11 +5,9 @@ import JobContainer from './JobContainer';
 
 const Jobs = props => {
   const [jobs, setJobs] = useState([]);
-  // const [job, setJob] = useState({});
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    // const url = `${APIURL}/jobs/refresh`;
     const url = `${APIURL}/jobs`;
     fetch(url)
       .then(response => response.json())

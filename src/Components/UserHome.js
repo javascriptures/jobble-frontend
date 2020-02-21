@@ -18,12 +18,12 @@ const UserHome = () => {
         <Button color="primary" component={Link} to="/review">
           View New Jobs
         </Button>
-        <button className="UserHomeButton" onClick={viewSavedJobs}>
+        <Button color="primary" component={Link} to="/savedjobs">
           View My Saved Jobs
-        </button>
-        <button className="UserHomeButton" onClick={deleteAccount}>
-          Delete My Jobble Account
-        </button>
+        </Button>
+        <Button color="primary" component={Link} to="/goodbye">
+          Delete my Jobble account
+        </Button>
       </div>
     </>
   );

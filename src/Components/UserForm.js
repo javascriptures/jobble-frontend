@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button';
 
 const UserForm = ({ user, handleSubmit, handleChange }) => (
   <form onSubmit={handleSubmit} className='form'>
@@ -27,12 +28,13 @@ const UserForm = ({ user, handleSubmit, handleChange }) => (
       name="password"
       onChange={handleChange}
     />
-    </div>
 
     <br />
   </div>
 
-    <button type="submit">Submit</button>
+  <Button size="large" type="submit">Submit</Button>
+
+    </div>
   </form>
 );
 

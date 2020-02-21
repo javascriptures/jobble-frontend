@@ -69,7 +69,10 @@ function JobContainer({ match }) {
       <p>{job && job.location}</p>
       <p>Posted: {job && job.created_at}</p>
       <h4>Apply:</h4>{' '}
-      <div dangerouslySetInnerHTML={{ __html: job && job.how_to_apply }} />
+      <div
+        className="Apply"
+        dangerouslySetInnerHTML={{ __html: job && job.how_to_apply }}
+      />
       <div dangerouslySetInnerHTML={{ __html: job && job.description }} />
     </div>
   );

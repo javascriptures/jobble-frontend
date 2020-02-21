@@ -46,6 +46,7 @@ const SignUp = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const url = `${APIURL}/users/create`;
+    console.log(event.target.value);
 
     fetch(url, {
       method: 'POST',
@@ -78,7 +79,7 @@ const SignUp = () => {
       <h1 className="signupHeader">Sign Up!</h1>
       <h5>Usernames must contain only alphnumeric characters/numbers.</h5>
       <h5>Whitespace is not allowed.</h5>
-      
+
       <h5>
         (We are not actually processing passwords...that will be added later)
       </h5>

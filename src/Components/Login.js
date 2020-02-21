@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { createGlobalState } from 'react-hooks-global-state';
+
 import { Redirect } from 'react-router-dom';
-import { APIURL } from '../config';
+import { APIURL } from '../config.js';
 import UserForm from './UserForm';
 
 const Login = () => {
-  const [user, setUser] = useState(null);
-  const [createdId, setDeletedId] = useState(null);
+  const initialUserState = {
+    username: ''
+  };
+  const [user, setUser] = useState(initialUserState);
+  const [createdId, setCreatedId] = useState(null);
   const [error, setError] = useState(false);
 
   const handleChange = event => {
@@ -37,23 +42,26 @@ const Login = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const url = `${APIURL}/users/delete`;
+    const url = `${APIURL}/users/login`;
 
     fetch(url, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'Content-type': 'application/json; charset=UTF-8'
+        'Content-type': 'application/json; charset=UTF-8',
+        username: user.username
       },
       body: JSON.stringify(user)
     })
-      .then(response => response.json())
+      .then(response => {
+        response.json();
+      })
       // We're going to update state so there's a re-render
       // By setting updated to true, we use this value to
       // render a Redirect component from react-router-dom
       // and take the user back to the "show" route which will
       // display the newly updated user.
       .then(data => {
-        setDeletedId(data._id);
+        setCreatedId(data._id);
       })
       .catch(() => {
         // Update the state if there was an error
@@ -66,8 +74,11 @@ const Login = () => {
     return <Redirect to={`/userhome`} />;
   }
   return (
-    <>
-      <h3>Login</h3>
+    <div className="loginContainer">
+      <h1 className="loginHeader">Log in!</h1>
+      <h5>
+        (We are not actually processing passwords...that will be added later)
+      </h5>
 
       {error && <p>Something went wrong... Please try again!</p>}
       <UserForm
@@ -75,7 +86,7 @@ const Login = () => {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-    </>
+    </div>
   );
 };
 

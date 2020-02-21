@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { createGlobalState } from 'react-hooks-global-state';
-
+import { useGlobalState } from '../state';
 import { Redirect } from 'react-router-dom';
 import { APIURL } from '../config.js';
 import UserForm from './UserForm';
@@ -12,6 +11,7 @@ const SignUp = () => {
     savedJobs: [],
     discardedJobs: []
   };
+  const [globalUsername, setGlobalUsername] = useGlobalState('username');
   const [user, setUser] = useState(initialUserState);
   const [createdId, setCreatedId] = useState(null);
   const [error, setError] = useState(false);
@@ -62,6 +62,7 @@ const SignUp = () => {
       // display the newly updated user.
       .then(data => {
         setCreatedId(data._id);
+        setGlobalUsername(data.username);
       })
       .catch(() => {
         // Update the state if there was an error

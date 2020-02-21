@@ -1,19 +1,14 @@
 import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import { useGlobalState } from '../state';
 
 const UserHome = () => {
-  const viewNewJobs = () => {
-    return <Redirect to={`/review`} />;
-  };
-  const viewSavedJobs = () => {};
-  const deleteAccount = () => {};
+  const [globalUsername, setGlobalUsername] = useGlobalState('username');
 
   return (
     <>
-      <h1 className="UserHomeH1">
-        Welcome to Jobble, (name will be filled in)!
-      </h1>
+      <h1 className="UserHomeH1">Welcome to Jobble, {globalUsername}!</h1>
       <div className="UserHomeButtons">
         <Button color="primary" component={Link} to="/review">
           View New Jobs

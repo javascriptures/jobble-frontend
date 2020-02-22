@@ -53,13 +53,14 @@ If you'd like to contribute to this application, feel free to make a pull reques
 
 ## Future TODOs
 
-- Incorporate the Login flow for users who have already gone through the SignUp flow.
-- Interact with the Jobble API to retrieve and update the unsavedJobs, savedJobs, and discardedJobs collections for each user.
-- Allow each user to directly call the GitHub Jobs API to populated a job list for review.
-- All each individual use to apply different search criteria when calling the GitHub Jobs API.
-- Minor tweaking to make the design more responsive on mobile/tablet.
-- Test the Delete API call once that API route is working.
+### Future Fixes
+- Front end to call DELETE API call to back end when deleting user
 - More seamless incorporation of the react-global-state
-- Actual session management, password management
+- Minor tweaking to make the design more responsive on mobile/tablet.
+
+
+### Future Features
 - Optimize Mongo schema for performance
-- Add swipe right/swipe left functionality
+- Allow each user to directly call the GitHub Jobs API with individualized search criteria, to populate their unsavedJobs array.
+- Actual login, password management, and session management
+- Add swipe right/swipe left functionality. Swiping (or using the prev/next button) will bring up the next job post.

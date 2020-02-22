@@ -60,7 +60,7 @@ If you'd like to contribute to this application, feel free to make a pull reques
 
 
 ### Future Features
-- Optimize Mongo schema for performance
+- Refactor Mongo schema to support intended functionality (Switch back end to mySQL?)
 - Allow each user to directly call the GitHub Jobs API with individualized search criteria, to populate their unsavedJobs array.
 - Actual login, password management, and session management
 - Add swipe right/swipe left functionality. Swiping (or using the prev/next button) will bring up the next job post.

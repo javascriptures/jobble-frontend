@@ -64,3 +64,5 @@ If you'd like to contribute to this application, feel free to make a pull reques
 - Allow each user to directly call the GitHub Jobs API with individualized search criteria, to populate their unsavedJobs array.
 - Actual login, password management, and session management
 - Add swipe right/swipe left functionality. Swiping (or using the prev/next button) will bring up the next job post.
+- Redo mobile hamburger navigation in Material UI
+- Redo additional UI elements in Material UI
